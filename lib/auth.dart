@@ -89,7 +89,9 @@ class _AuthScreenState extends State<AuthScreen> {
                         physics: const BouncingScrollPhysics(),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(32, 48, 32, 32),
-                          child: selectedTabIndex==loginTab? _Login(themeData: themeData):_SignUp(themeData: themeData),
+                          child: selectedTabIndex == loginTab
+                              ? _Login(themeData: themeData)
+                              : _SignUp(themeData: themeData),
                         ),
                       ),
                     ),
