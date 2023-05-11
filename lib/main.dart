@@ -8,6 +8,7 @@ import 'package:flutter_application_2/data.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/gen/fonts.gen.dart';
+import 'package:flutter_application_2/profile.dart';
 import 'package:flutter_application_2/splash.dart';
 
 import 'home.dart';
@@ -98,7 +99,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.white,
               foregroundColor: primaryTextColor,
               titleSpacing: 32)),
-      home: ArticleScreen(),
+      home: const ProfileScreen(),
       // home: Stack(
       //   children: [
       //     const Positioned.fill(

@@ -1,4 +1,3 @@
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
@@ -100,15 +99,15 @@ class _PostList extends StatelessWidget {
             physics: const ClampingScrollPhysics(),
             itemBuilder: (context, index) {
               final post = posts[index];
-              return _Post(post: post);
+              return Post(post: post);
             })
       ],
     );
   }
 }
 
-class _Post extends StatelessWidget {
-  const _Post({
+class Post extends StatelessWidget {
+  const Post({
     super.key,
     required this.post,
   });
@@ -133,7 +132,10 @@ class _Post extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
-            child: Image.asset('assets/img/posts/small/${post.imageFileName}'),
+            child: Image.asset(
+              'assets/img/posts/small/${post.imageFileName}',
+              width: 120,
+            ),
           ),
           Expanded(
             child: Padding(
