@@ -48,6 +48,7 @@ class ArticleScreen extends StatelessWidget {
       body: Stack(
         children: [
           CustomScrollView(
+            physics: BouncingScrollPhysics(),
             slivers: [
               SliverAppBar(
                 pinned: true,
