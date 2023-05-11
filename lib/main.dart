@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_2/article.dart';
 import 'package:flutter_application_2/data.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
@@ -35,65 +36,69 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        textButtonTheme: TextButtonThemeData(
-          style: ButtonStyle(
-            textStyle: MaterialStateProperty.all(
-              const TextStyle(
-                fontFamily: FontFamily.avenir,
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
+          textButtonTheme: TextButtonThemeData(
+            style: ButtonStyle(
+              textStyle: MaterialStateProperty.all(
+                const TextStyle(
+                  fontFamily: FontFamily.avenir,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ),
-        ),
-        textTheme: TextTheme(
-            headline5: TextStyle(
+          textTheme: TextTheme(
+              headline5: TextStyle(
+                  fontFamily: FontFamily.avenir,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: primaryTextColor),
+              headline6: TextStyle(
                 fontFamily: FontFamily.avenir,
-                fontSize: 20,
+                color: primaryTextColor,
                 fontWeight: FontWeight.bold,
-                color: primaryTextColor),
-            headline6: TextStyle(
-              fontFamily: FontFamily.avenir,
-              color: primaryTextColor,
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-            ),
-            headline4: TextStyle(
-                fontFamily: FontFamily.avenir,
-                color: primaryTextColor,
-                fontWeight: FontWeight.w700,
-                fontSize: 24),
-            subtitle1: TextStyle(
-                fontFamily: FontFamily.avenir,
-                color: secondaryTextColor,
                 fontSize: 18,
-                fontWeight: FontWeight.w200),
-            bodyText2: TextStyle(
+              ),
+              headline4: TextStyle(
+                  fontFamily: FontFamily.avenir,
+                  color: primaryTextColor,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 24),
+              subtitle1: TextStyle(
+                  fontFamily: FontFamily.avenir,
+                  color: secondaryTextColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w200),
+              bodyText2: TextStyle(
+                  fontFamily: FontFamily.avenir,
+                  fontSize: 12,
+                  color: secondaryTextColor),
+              subtitle2: TextStyle(
+                  fontFamily: FontFamily.avenir,
+                  color: primaryTextColor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400),
+              caption: const TextStyle(
                 fontFamily: FontFamily.avenir,
-                fontSize: 12,
-                color: secondaryTextColor),
-            subtitle2: TextStyle(
-                fontFamily: FontFamily.avenir,
-                color: primaryTextColor,
-                fontSize: 14,
-                fontWeight: FontWeight.w400),
-            caption: const TextStyle(
-              fontFamily: FontFamily.avenir,
-              fontWeight: FontWeight.w700,
-              fontSize: 10,
-              color: Color(0xff7B8BB2),
-            )),
-        // is not restarted.
-        colorScheme: ColorScheme.light(
-          primary: primaryColor,
-          onPrimary: Colors.white,
-          surface: Colors.white,
-          onSurface: primaryTextColor,
-          background: Color(0xffFBFCFF),
-          onBackground: primaryTextColor,
-        ),
-      ),
-      home: SplashScreen(),
+                fontWeight: FontWeight.w700,
+                fontSize: 10,
+                color: Color(0xff7B8BB2),
+              )),
+          // is not restarted.
+          colorScheme: ColorScheme.light(
+            primary: primaryColor,
+            onPrimary: Colors.white,
+            surface: Colors.white,
+            onSurface: primaryTextColor,
+            background: Color(0xffFBFCFF),
+            onBackground: primaryTextColor,
+          ),
+          snackBarTheme: SnackBarThemeData(backgroundColor: primaryColor),
+          appBarTheme: AppBarTheme(
+              backgroundColor: Colors.white,
+              foregroundColor: primaryTextColor,
+              titleSpacing: 32)),
+      home: ArticleScreen(),
       // home: Stack(
       //   children: [
       //     const Positioned.fill(
