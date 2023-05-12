@@ -293,7 +293,7 @@ class BottomNavigationItem extends StatelessWidget {
               height: 24,
             ),
             const SizedBox(
-              height: 4,
+              height: 3,
             ),
             Text(
               title,
