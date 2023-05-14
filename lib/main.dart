@@ -99,7 +99,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.white,
               foregroundColor: primaryTextColor,
               titleSpacing: 32)),
-      home: const MainScreen(),
+      home: const SplashScreen(),
       // home: Stack(
       //   children: [
       //     const Positioned.fill(
