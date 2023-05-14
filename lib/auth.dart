@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
+import 'package:flutter_application_2/main.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -136,8 +137,10 @@ class _Login extends StatelessWidget {
         const _PasswordTextfieldState(),
         const SizedBox(height: 24),
         ElevatedButton(
-          onPressed: () {},
-          child: const Text('Login'),
+          onPressed: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const MainScreen()));
+          },
           style: ButtonStyle(
             minimumSize: MaterialStateProperty.all(
               Size(MediaQuery.of(context).size.width, 60),
@@ -148,6 +151,7 @@ class _Login extends StatelessWidget {
               ),
             ),
           ),
+          child: const Text('Login'),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -221,8 +225,10 @@ class _SignUp extends StatelessWidget {
         const _PasswordTextfieldState(),
         const SizedBox(height: 24),
         ElevatedButton(
-          onPressed: () {},
-          child: Text('Sign up'.toUpperCase()),
+          onPressed: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const MainScreen()));
+          },
           style: ButtonStyle(
             minimumSize: MaterialStateProperty.all(
               Size(MediaQuery.of(context).size.width, 60),
@@ -233,6 +239,7 @@ class _SignUp extends StatelessWidget {
               ),
             ),
           ),
+          child: Text('Sign up'.toUpperCase()),
         ),
         const SizedBox(height: 12),
         const Center(
