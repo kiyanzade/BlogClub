@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # flutter_application_2
 
 A new Flutter project.
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# BlogClub
+Blog Club mobile application project
+>>>>>>> 6a1005c241d55f4c93e9139cacfca7b695c8b21d
